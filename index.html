@@ -1,59 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Página Web - Tarea</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Puesta en marcha de una página web</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <h1>Puesta en marcha de una página Web</h1>
+    <h1 onclick="toggleSection('infoGeneral')">🧑‍💻 Puesta en marcha de una página Web</h1>
+  </header>
+
+  <section id="infoGeneral" class="hidden section">
     <p><strong>Estudiante:</strong> Jhon Stewar Nuñez Castellanos</p>
     <p><strong>Profesor:</strong> Elkin Dario Gonzales Marinez</p>
     <p><strong>Curso:</strong> Desarrollo de Aplicaciones Web</p>
-    <p><strong>Fecha de entrega:</strong> 14 de julio de 2025</p>
+    <p><strong>Fecha de entrega:</strong> 21 de julio de 2025</p>
     <p>Semana 2 Pruebas y puestas en marcha de sistemas</p>
-  </header>
+  </section>
 
-  <main>
-    <section>
-      <h2>Comparativa de Servicios de Hosting</h2>
-      <article>
-        <h3>1. Vercel</h3>
-        <p>Comenzando con Vercel se encontró que es un hosting enfocado en aplicaciones web desarrolladas con tecnologías como JavaScript como react o Vue. Vercel ofrece un flujo de despliegue automatizado desde varios sistemas de versionamientos como github o bitbucket que despliegan inmediatamente luego de cualquier cambio. Soporta gunciones como serverless, https gratuito y permite configuraciónes avanzadas desde el plan gratuito. En su plan gratuito permite proyectos ilimitados.</p>
-      </article>
-      <article>
-        <h3>2. Netlify</h3>
-        <p>En Netlify también es una plataforma popular en el despliegue de sitios estáticos y JAMstack. Al igual que Vercel se conecta fácilmente con los distintos repositorios y permite automatizar desplieges. Ofrece funciones como formularios, autentificación y serverless. El plan gratuito incluye https, ci/cd y despliegue de sitios desde diferentes ramas.</p>
-      </article>
-      <article>
-        <h3>3. GitHub Pages</h3>
-        <p>Y por ultimo en GitHub Pages es un servicio ofrecido directamente por GitHub que permite publicar páginas estáticas directamente desde un repositorio. Es ideal para proyectos sencillos que no requieren funciones dinámicas ni servidores backend.</p>
-      </article>
-    </section>
-
-    <section>
-      <h2>Pasos para subir la aplicación web</h2>
-      <ol>
-        <li>Crear un repositorio en GitHub con nombre, por ejemplo, <code>pagina-tarea</code>.</li>
-        <li>Clonar el repositorio en tu PC.</li>
-        <li>Copiar los archivos <code>index.html</code>, <code>style.css</code> y <code>script.js</code>.</li>
-        <li>Hacer <code>git add .</code>, <code>git commit -m "Subiendo tarea"</code> y <code>git push</code>.</li>
-        <li>Desde Vercel.com, iniciar sesión con GitHub y seleccionar el repositorio para desplegar.</li>
-        <li>Esperar que compile y se muestre la URL del proyecto.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>URL del proyecto</h2>
-      <p>https://nombre-del-proyecto.vercel.app/</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Trabajo académico para el curso de Desarrollo Web - UNIMINUTO</p>
-  </footer>
+  <section class="section">
+    <h2 onclick="toggleSection('comparacion')">📊 Comparación de proveedores de hosting</h2>
+    <div id="comparacion" class="hidden">
+      <p><strong>GitHub Pages:</strong> Ideal para proyectos estáticos. Es gratuito, permite conectar con GitHub directamente y tiene una comunidad grande.</p>
+      <p><strong>Netlify:</strong> Ofrece despliegue automático desde GitHub, funciones serverless y dominio gratuito. Es muy usado en JAMstack.</p>
+      <p><strong>Vercel:</strong> Excelente para React y Next.js. Despliegue automático desde repositorios y preview por cada PR. Gratuito con funciones premium.</p>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
